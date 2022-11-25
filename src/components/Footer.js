@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div>
       <section className='policies flex flex-row'>
-        <p></p>
+        <p>Test</p>
         <p></p>
         <p></p>
         <p></p>
