@@ -68,20 +68,27 @@ function Hometemplate() {
         </div>
       </section>
 
-      <section className='health-news-articles flex flex-row'>
-        <div className='article flex flex-row'>
-          
-          <h2>Placeholder Title</h2>
+      <section className='living-healthy'>
+        <div className='title-and-link flex flex-row'>
+          <h1>Title</h1>
+          <a href='https://www.webmd.com/'>See all</a>
         </div>
-
-        <div className='article flex flex-row'>
-          
-          <h2>Placeholder Title</h2>
-        </div>
-
-        <div className='article flex flex-row'>
-          
-          <h2>Placeholder Title</h2>
+        <div className='images flex flex-row'>
+          <img alt='Mental Health' src={MentalHealth}>
+            <h1>Mental Health</h1>
+          </img>
+          <img alt='Diet & Weight Management' src={Diet}>
+            <h1>Diet & Weight Management</h1>
+          </img>
+          <img alt='Pregnancy' src={Pregnancy}>
+            <h1>Pregnancy</h1>
+          </img>
+          <img alt='Sex & Relationships' src={Relationships}>
+            <h1>Sex & Relationships</h1>
+          </img>
+          <img alt='Fitness & Exercise' src={Fitness}>
+            <h1>Fitness & Exercise</h1>
+          </img>
         </div>
       </section>
 

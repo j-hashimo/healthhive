@@ -1,3 +1,7 @@
+//Improvements:
+//1. The sm navbar needs to be sticky
+
+
 import React, { useState } from 'react';
 import SvgComponent from './images/WebMDLogoWhite';
 import {AiOutlineClose, AiOutlineMenu, AiOutlineMail, AiOutlineSearch} from 'react-icons/ai';
@@ -154,7 +158,7 @@ const NavBar = () => {
 
   
   return (
-    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color">
+    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color sticky">
       <div className='flex items-center justify-center'>
         <div className='block lg:hidden' onClick={handleNav}>
           {nav ? <div className='text-webmd-bg-color mr-80'><AiOutlineClose size={30}/></div> : <div className='text-webmd-bg-color mr-80'><AiOutlineMenu size={30} /></div>}
@@ -250,8 +254,9 @@ const NavBar = () => {
         </form>
         <ul className='p-4'>
           <li className='bg-webmd-bg-color p-2 border-b border-gray-300 rounded-md font-extrabold cursor-pointer text-left' onClick={handleNav}><Link to='/'>Home</Link></li>
-          <li className='bg-webmd-bg-color p-2 border-b border-gray-300 rounded-md font-extrabold cursor-pointer text-left flex' onClick={handleHoverConditionsMobile}>Conditions <div className="ml-52 text-2xl"><IoIosArrowForward/></div></li>
-            {/*Conditions content on mobile 
+          <li className='bg-webmd-bg-color p-2 border-b border-gray-300 rounded-md font-extrabold cursor-pointer text-left flex' onClick={handleHoverConditionsMobile}>Conditions <div className="ml-52 text-2xl"><IoIosArrowForward/></div>
+          </li>
+            {/*Condition content on mobile 
               Need to code a vertical scrollbar */}
             <div className={hoverConditionsMobile ? 'fixed left-0 top-24 w-300 h-full rounded-md bg-white ease-in-out duration-500 lg:hidden' : 'fixed left-[-100%]'}>
               <Scrollbars style={{width: 400, height: 550}}>
