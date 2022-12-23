@@ -1,5 +1,5 @@
 //Improvements:
-//1. The sm navbar needs to be sticky
+//1. The sm navbar needs to be sticky - DONE
 
 
 import React, { useState } from 'react';
@@ -158,7 +158,7 @@ const NavBar = () => {
 
   
   return (
-    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color sticky">
+    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color sticky top-0 z-10">
       <div className='flex items-center justify-center'>
         <div className='block lg:hidden' onClick={handleNav}>
           {nav ? <div className='text-webmd-bg-color mr-80'><AiOutlineClose size={30}/></div> : <div className='text-webmd-bg-color mr-80'><AiOutlineMenu size={30} /></div>}
@@ -189,7 +189,7 @@ const NavBar = () => {
         <li className='p-2 text-webmd-bg-color font-semibold hover:bg-white hover:text-nav-bg-color duration-500 rounded-md flex cursor-pointer relative' onClick={handleHoverDrugs}><p className='mr-1 font-bold py-3'>Drugs & Supplements</p> 
           {hoverDrugs ? <div className='mt-1 py-3'><IoIosArrowUp /></div> : <div className='mt-1 py-3'><IoIosArrowDown/></div>}
           {/*Drugs content on desktop */}
-          <div className={hoverDrugs ? 'fixed left-26 top-24 w-[30%] h-[35%] rounded-md bg-white transition ease-in-out duration-500' : 'fixed left-[-100%]'}>
+          <div className={hoverDrugs ? 'fixed left-26 top-24 w-[30%] h-[33%] rounded-md bg-white transition ease-in-out duration-500' : 'fixed left-[-100%]'}>
             {
               drugLinks.map((link) => (
                   <a href={link.href}><p className='text-nav-bg-color bg-white border-b border-gray-300 m-4 '><Link to={link.link}>{link.name}</Link></p></a>
@@ -216,7 +216,7 @@ const NavBar = () => {
         </li>
         <li className={search ? 'hidden' : 'p-2 text-webmd-bg-color font-semibold hover:bg-white hover:text-nav-bg-color duration-500 rounded-md flex cursor-pointer'} onClick={handleHoverMore}><p className='mr-1 py-3 font-bold'>More</p> 
           {hoverMore ? <div className='mt-1 py-3'><IoIosArrowUp /></div> : <div className='mt-1 py-3'><IoIosArrowDown/></div>}
-          <div className={hoverMore ? 'fixed right-20 top-24 w-[30%] h-3/4 rounded-md bg-white ease-in-out duration-500' : 'fixed left-[-100%]'}>
+          <div className={hoverMore ? 'fixed right-20 top-24 w-[30%] h-[64%] rounded-md bg-white ease-in-out duration-500' : 'fixed left-[-100%]'}>
             {
               MoreLinks.map((link) => (
                 <div>

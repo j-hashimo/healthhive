@@ -33,6 +33,7 @@ import MissionMod from './images/mission-mod.jpg';
 import {FaFacebookF, FaTwitter, FaInstagram, FaTiktok} from 'react-icons/fa';
 import AppStore from './images/AppStore.png';
 import GooglePlay from './images/GooglePlayIcon.png';
+import TopStory from './TopStory';
 /*In order for the content to show, need to fill in info for img, heading, and anchor tags (no yellow bar should show)*/
 
 function Home() {
@@ -86,18 +87,8 @@ function Home() {
     <div>
       {/*To make sure it doesn't conflict with the navbar, have a large mt, then have an md: media query to move the content back up to a normal position */}
       {/*Today's Top Stories: */}
-      <section>
-        <h3 className='mt-8 text-left text-nav-bg-color pl-2 text-3xl font-bold border-b border-gray-300 pb-3'>Today's Top Stories</h3>
-
-        <div className='headline flex flex-row mt-4 cursor-pointer border-b border-gray-300 pb-4' onClick={() => {window.open('https://www.webmd.com/balance/ss/slideshow-holiday-travel-less-stressful', "_blank");}}>
-          <img alt='headline' src={TopStoryImage}/>
-          <div className='headline-text flex flex-col px-4 justify-center'>
-            <h1 className='font-bold text-button-color text-4xl text-left'>Traveling? How to Do It With Less Stress</h1>
-            <p className='text-left mt-2 text-xl font-medium text-gray-700'>Plan ahead (for security lines, traffic delays) and use technology to stay ahead of the holiday hustle. Learn more tips.</p>
-          </div>
-        </div>
-      </section>
-
+      <TopStory/>
+      
       {/*Today's Top Stories - other 3 stories */}
       <section className='articles flex flex-row mt-12 mb-12 justify-between'>
         <div className='article flex flex-row ml-8 mr-20 cursor-pointer' onClick={() => {window.open('https://www.webmd.com/diet/ss/slideshow-what-to-do-after-overeating', "_blank");}}>
@@ -116,7 +107,7 @@ function Home() {
         </div>
       </section>
 
-      {/*Need to make the sections responsive in mobile, which I will do later */}
+      {/*Need to make the sections responsive in mobile, which I will do later. One way to make the sections responsive (if relevant) is to use flex grid with the grid template columns */}
       {/*Living Healthy: */}
       <section>
         <div className='title-and-link flex flex-row justify-between border-b border-gray-300 pb-4'>
