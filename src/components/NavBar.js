@@ -3,7 +3,7 @@
 
 
 import React, { useState } from 'react';
-import SvgComponent from './images/WebMDLogoWhite';
+import SvgComponent from './images/HealthHiveSilver';
 import {AiOutlineClose, AiOutlineMenu, AiOutlineMail, AiOutlineSearch} from 'react-icons/ai';
 import {IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import { Scrollbars } from 'react-custom-scrollbars-2';
@@ -158,22 +158,23 @@ const NavBar = () => {
 
   
   return (
-    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color sticky top-0 z-10">
+    <div className="flex justify-between items-center h-24 w-full mx-auto px-4 bg-nav-bg-color sticky top-0 z-10 border-b border-gray-500">
       <div className='flex items-center justify-center'>
         <div className='block lg:hidden' onClick={handleNav}>
           {nav ? <div className='text-webmd-bg-color mr-80'><AiOutlineClose size={30}/></div> : <div className='text-webmd-bg-color mr-80'><AiOutlineMenu size={30} /></div>}
           {/* if nav is true (which it is when handleNav is activated - i.e. when the user clicks on the section, the stuff happens) */}
         </div>
 
-        <div className='w-20 h-20 lg:w-28 lg:h-28 mt-16 lg:mt-20'>
-          <SvgComponent className='w-20 h-20 lg:w-28 lg:h-28 px-1'/>
+        <div className='w-full h-20 lg:w-20 lg:h-20 mt-2 lg:mt-2 flex flex-col items-center'>
+          <SvgComponent className='w-auto h-auto px-1 text-white'/>
+          <h1 className='text-webmd-bg-color font-bold'>HealthHive</h1>
         </div>
         {/*Need to learn how to center the SVG, but only when the width of the interface is less than lg*/}
       </div>
       
       {/*Desktop Navbar options */}
       <ul className='lg:flex lg:flex-row hidden mr-auto ml-auto '>
-        <li className='p-2 text-webmd-bg-color font-semibold hover:bg-white hover:text-nav-bg-color duration-500 rounded-md flex cursor-pointer' onClick={handleHoverConditions}><p className='mr-1 font-bold py-3'>Conditions</p> 
+        <li className='lg:p-2 text-webmd-bg-color font-semibold hover:bg-white hover:text-nav-bg-color duration-500 rounded-md flex cursor-pointer' onClick={handleHoverConditions}><p className='mr-1 font-bold py-3 lg:text-base'>Conditions</p> 
           {hoverConditions ? <div className='mt-1 py-3'><IoIosArrowUp /></div> : <div className='mt-1 py-3'><IoIosArrowDown/></div>}
           {/*Conditions content on desktop */}
           <div className={hoverConditions ? 'fixed left-20 top-24 w-[60%] h-3/4 rounded-md bg-white ease-in-out duration-500 grid grid-cols-4' : 'fixed left-[-100%]'}>
@@ -227,7 +228,7 @@ const NavBar = () => {
           </div>
         </li>
         <div className={search ? 'hidden' : 'border-r-2 border-webmd-bg-color px-2 mr-4'}>{/* This div with no content is used to make the vertical and horizontal border designs */}</div>
-        <li className={search ? 'hidden' : 'px-2 py-5  flex text-webmd-bg-color border-2 border-webmd-bg-color rounded-md cursor-pointer'} onClick={() => {window.open('https://member.webmd.com/signin?appid=1&returl=https%3A%2F%2Fwww.webmd.com%2Fdefault.htm', "_blank");}}><div className='mt-1 pr-1'><AiOutlineMail/></div> Subscribe</li>
+        <li className={search ? 'hidden' : 'px-2 py-5  flex text-webmd-bg-color border-2 border-webmd-bg-color rounded-md cursor-pointer items-center'} onClick={() => {window.open('https://member.webmd.com/signin?appid=1&returl=https%3A%2F%2Fwww.webmd.com%2Fdefault.htm', "_blank");}}><div className='mt-1 pr-1'><AiOutlineMail/></div> Subscribe</li>
         <li className={search ? 'hidden': 'p-5 ml-2 text-webmd-bg-color font-bold cursor-pointer'} onClick={() => {window.open('https://member.webmd.com/signin?appid=1&returl=https%3A%2F%2Fwww.webmd.com', "_blank");}}>Log In</li>
         <form className={search ? 'p-2 w-80' : 'hidden'}>
           <div className='flex flex-row'>
@@ -239,7 +240,7 @@ const NavBar = () => {
         </form>
         
       </ul>
-      <div className={nav ? 'hidden' : 'text-webmd-bg-color text-3xl mt-1 cursor-pointer pl-2'} onClick={handleSearch}>{search ? <div className='mt-1'><AiOutlineClose size={20}/></div> : <AiOutlineSearch />}</div>
+      <div className={nav ? 'hidden' : 'text-webmd-bg-color text-3xl mt-1 cursor-pointer pl-2 hidden lg:block'} onClick={handleSearch}>{search ? <div className='mt-1'><AiOutlineClose size={20}/></div> : <AiOutlineSearch />}</div>
 
 
       {/*Major sections on Mobile */}
