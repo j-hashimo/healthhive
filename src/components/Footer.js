@@ -3,7 +3,7 @@ import {FaFacebookF, FaTwitter, FaPinterest} from 'react-icons/fa';
 import Seal from './images/seal.png';
 import HONConduct from './images/HONConduct.png';
 import TagRegistered from './images/tag-registered.png';
-import SvgComponent from './images/WebMDLogo.jsx';
+import SvgComponent from './images/HealthHiveWhite.jsx';
 
 //Note: only completed the policy section, just repeat the same for the other sections
 //And the section needs to be responsive
@@ -91,7 +91,7 @@ function Footer() {
           <ul  className='flex ml-7 grid grid-cols-5 gap-6'>
             <li onClick={handlePolicy} className={policy ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>Policies</li>
             <li onClick={handleAbout} className={about ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>About</li>
-            <li onClick={handleNetwork} className={network ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>WebMD Network</li>
+            <li onClick={handleNetwork} className={network ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>HealthHive Network</li>
             <li onClick={handleApps} className={apps ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>Our Apps</li>
             <li onClick={handleAds} className={ads ? 'p-2 text-webmd-bg-color font-medium border-b-4 border-webmd-bg-color' : 'p-2 text-webmd-bg-color font-medium'}>For Advertisers</li>
           </ul>
@@ -104,7 +104,11 @@ function Footer() {
           </div>
         </div>
           {/* <div className='flex justify-center items-center'>*/}
-          
+          <div className='text-webmd-bg-color mt-2 justify-center items-center flex flex-col'>
+            <h1 className='font-bold'>Credits:</h1>
+            <a href="https://www.webmd.com/" title="doctor icons">Sections and their respective images are by WebMD</a>
+            <a href="https://www.flaticon.com/free-icons/doctor" title="doctor icons">Doctor icons created by mavadee - Flaticon</a>
+          </div>
           <div className='flex md:flex-row gap-6 bottom-32 right-0 absolute mx-20 pb-20 w-auto'>
             <img className='' src={Seal} alt='Seal' />
             <img src={HONConduct} alt='HONConduct' />
@@ -113,9 +117,9 @@ function Footer() {
         
 
         <div className='flex justify-between border-t border-webmd-bg-color grid grid-cols-2 gap-1 justify-center items-center mt-96'>
-          <p className='text-webmd-bg-color text-sm p-2'>© 2005 - 2022 WebMD LLC. All rights reserved. WebMD does not provide medical advice, diagnosis or treatment. <span className='underline cursor-pointer' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/additional-info', "_blank");}}> See additional information.</span></p>
+          <p className='text-webmd-bg-color text-sm p-2'>© 2005 - 2022 HealthHive. All rights reserved. HealthHive does not provide medical advice, diagnosis or treatment. <span className='underline cursor-pointer' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/additional-info', "_blank");}}> See additional information.</span></p>
           
-          <SvgComponent className='w-20 h-20 mx-96'/>
+          <div className='w-14 h-14 mt-2 ml-32'><SvgComponent className='w-10 h-10'/></div>
         </div>
         
       </section>

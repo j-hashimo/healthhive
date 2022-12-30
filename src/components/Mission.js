@@ -8,7 +8,7 @@ function Mission() {
           <img src={MissionMod} alt='Mission Mod' className='h-auto w-auto lg:h-full lg:w-[50%]' />
           <div className='flex flex-col'>
             <h1 className='text-left font-semibold text-button-color text-4xl p-2'>Our Content Is Different Because We Set the Bar Higher</h1>
-            <p className='text-left text-gray-800 p-2'>As a leader in digital health publishing for more than 25 years, WebMD strives to maintain the most comprehensive and reliable source of health and medical information on the internet.</p>
+            <p className='text-left text-gray-800 p-2'>As a leader in digital health publishing for more than 25 years, HealthHive strives to maintain the most comprehensive and reliable source of health and medical information on the internet.</p>
             <p className='text-left text-gray-800 p-2'>We recognize the responsibility that comes along with being the most well-known and trusted health information platform — and we take that responsibility seriously by:</p>
             <div className='flex p-2 text-center items-center justify-center'>
               <h1 className='text-4xl text-button-color font-bold'>01</h1>

@@ -5,7 +5,7 @@ function Newsletter() {
     <div class="flex flex-row  text-center justify-center">
           <div class="flex bg-nav-bg-color mt-11 mb-11 px-11 py-2 justify-between rounded-md w-full mx-5">
             <div class="flex flex-col justify-center mr-36">
-              <h3 class="text-hero-secondary font-semibold mt-2 text-2xl text-webmd-bg-color text-left">Free WebMD Newsletters</h3>
+              <h3 class="text-hero-secondary font-semibold mt-2 text-2xl text-webmd-bg-color text-left">Free HealthHive Newsletters</h3>
               <p class="text-left text-webmd-bg-color">Doctor-approved health and wellness information delivered to your inbox.</p>
               <div className='checkbox flex mt-6 justify-between'>
                 <div className='checkbox flex'>
@@ -31,10 +31,10 @@ function Newsletter() {
                 </div>
               </div>
               <div>
-                <p class="text-left text-webmd-bg-color text-xs py-4">By clicking Subscribe, I agree to the WebMD <span className='cursor-pointer underline' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/about-terms-and-conditions-of-use', "_blank");}}>Terms & Conditions</span> and <span className='cursor-pointer underline' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/about-privacy-policy', "_blank");}}>Privacy Policy</span> and understand that I may opt out of WebMD subscriptions at any time.</p>
+                <p class="text-left text-webmd-bg-color text-xs py-4">By clicking Subscribe, I agree to the HealthHive <span className='cursor-pointer underline' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/about-terms-and-conditions-of-use', "_blank");}}>Terms & Conditions</span> and <span className='cursor-pointer underline' onClick={() => {window.open('https://www.webmd.com/about-webmd-policies/about-privacy-policy', "_blank");}}>Privacy Policy</span> and understand that I may opt out of HealthHive subscriptions at any time.</p>
               </div>
               <div>
-                <p class="text-left text-webmd-bg-color underline font-bold py-4">See All WebMD Newsletters</p>
+                <p class="text-left text-webmd-bg-color underline font-bold py-4">See All HealthHive Newsletters</p>
               </div>
               
             </div>

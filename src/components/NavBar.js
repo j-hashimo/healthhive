@@ -3,7 +3,7 @@
 
 
 import React, { useState } from 'react';
-import SvgComponent from './images/HealthHiveSilver';
+import SvgComponent from './images/HealthHiveWhite';
 import {AiOutlineClose, AiOutlineMenu, AiOutlineMail, AiOutlineSearch} from 'react-icons/ai';
 import {IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import { Scrollbars } from 'react-custom-scrollbars-2';
